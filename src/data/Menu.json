@@ -7,21 +7,26 @@
     },
     {
       "id": 2,
+      "name": "About Us",
+      "link": "about"
+    },
+    {
+      "id": 3,
       "name": "Project",
       "link": "project"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Services",
       "link": "services"
     },    
     {
-      "id": 4,
+      "id": 5,
       "name": "Blog",
       "link": "blog"
     },        
     {
-      "id":5,
+      "id":6,
       "name": "Contact",
       "link": "contact"
     }

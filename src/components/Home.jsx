@@ -1,37 +1,34 @@
 import React from "react";
+import IntroData from "../data/HomeData.json";
 const Home = () => {
+  const records = IntroData["Intro"];
   return (
-    <div class="container mx-auto md:px-6">
-    <section class="py-12">
-      <div class="flex flex-wrap">
-        <div class="mb-12 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-5/12">
-          <div class="flex lg:py-5">
-            <img src="https://phuldevmandal.com.np/dist/img/profile.webp" class="z-[10] w-full rounded-lg shadow-lg dark:shadow-black/20 lg:ml-[50px]" alt="image"/>
+    <div className="container mx-auto md:px-6">
+    <section className="py-12">
+      {records.map((record)=>(
+        <div key={record["id"]} className="flex flex-wrap">
+        <div className="mb-12 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-5/12">
+          <div className="flex lg:py-5">
+            <img src={record["avatar"]} className="z-[10] w-full rounded-lg shadow-lg dark:shadow-black/20 lg:ml-[50px]" alt={record["title"]}/>
           </div>
         </div>
-        <div class="w-full shrink-0 grow-0 basis-auto lg:w-7/12 static">
-          <div class="flex h-full items-center rounded-lg bg-zinc-800 p-6 text-center text-white lg:pl-12 lg:text-left">
-            <div class="lg:pl-12">
-              <h2 class="mb-8 text-3xl font-bold">Phuldev Mandal</h2>
-              <p class="mb-8 pb-2 lg:pb-0">
-                Looking For A Web Developer To Build A Website That Will
-                Take Your Business To New Heights? With My Technical
-                Expertise And Creativity, I'll Work With You To Develop A
-                Website That's Visually Striking, User-Friendly, And
-                Optimized For Search Engines. Whether You're Looking For A
-                Simple Website Or A Dynamic E-Commerce Platform, I Can
-                Deliver The Perfect Solution For Your Business.
+        <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12 static">
+          <div className="flex h-full items-center rounded-lg bg-zinc-800 p-6 text-center text-white lg:pl-12 lg:text-left">
+            <div className="lg:pl-12">
+              <h2 className="mb-8 text-3xl font-bold">{record["title"]}</h2>
+              <p className="mb-8 pb-2 lg:pb-0">
+                {record["body"]}
               </p>
 
-              <div class="mx-auto mb-8 flex flex-col md:flex-row md:justify-around xl:justify-start">
-                <p class="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 xl:mr-20">
+              <div className="mx-auto mb-8 flex flex-col md:flex-row md:justify-around xl:justify-start">
+                <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 xl:mr-20">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="2"
                     stroke="currentColor"
-                    class="mr-2 h-5 w-5"
+                    className="mr-2 h-5 w-5"
                   >
                     <path
                       stroke-linecap="round"
@@ -42,14 +39,14 @@ const Home = () => {
                   Best team
                 </p>
 
-                <p class="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 xl:mr-20">
+                <p className="mx-auto mb-4 flex items-center md:mx-0 md:mb-2 lg:mb-0 xl:mr-20">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="2"
                     stroke="currentColor"
-                    class="mr-2 h-5 w-5"
+                    className="mr-2 h-5 w-5"
                   >
                     <path
                       stroke-linecap="round"
@@ -60,14 +57,14 @@ const Home = () => {
                   Best quality
                 </p>
 
-                <p class="mx-auto mb-2 flex items-center md:mx-0 lg:mb-0">
+                <p className="mx-auto mb-2 flex items-center md:mx-0 lg:mb-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="2"
                     stroke="currentColor"
-                    class="mr-2 h-5 w-5"
+                    className="mr-2 h-5 w-5"
                   >
                     <path
                       stroke-linecap="round"
@@ -90,6 +87,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      ))}      
     </section>
   </div>
   );
